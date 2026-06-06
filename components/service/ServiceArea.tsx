@@ -10,10 +10,12 @@ import HtmlRenderer from "../../common/HtmlRenderer";
 const PLACEHOLDER_IMAGE = "/assets/images/placeholder.jpg";
 
 // ─── Types ────────────────────────────────────────────────────────────────────
+// ─── Types ────────────────────────────────────────────────────────────────────
 
 interface BulletPoint {
   bullet_point: string;
 }
+
 
 interface ServiceListing {
   id: number;
