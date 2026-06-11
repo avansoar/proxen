@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 type PortfolioCard = {
   src: string;
@@ -123,7 +124,7 @@ export default function PortfolioAreaHomeTwo() {
         </div>
 
         <div className="portfolio-grid">
-          {cardImages.map((item) => (
+          {cardImages.map((item, index) => (
             <Link
               key={item.link}
               href={item.link}
@@ -131,9 +132,24 @@ export default function PortfolioAreaHomeTwo() {
               style={{
                 gridColumn: `span ${item.colSpan}`,
                 gridRow: `span ${item.rowSpan}`,
+                position: 'relative',
+                display: 'block',
               }}
             >
-              <img src={item.src} alt={item.alt} loading={item.rowSpan === 1 ? 'lazy' : 'eager'} />
+              <Image
+                src={item.src}
+                alt={item.alt}
+                fill
+                style={{ objectFit: 'cover' }}
+                sizes={
+                  item.colSpan === 2
+                    ? '(max-width: 768px) 100vw, 66vw'
+                    : '(max-width: 768px) 100vw, 33vw'
+                }
+                // First two images are likely above or near the fold — prioritize
+                priority={index < 2}
+                loading={index < 2 ? undefined : 'lazy'}
+              />
             </Link>
           ))}
         </div>

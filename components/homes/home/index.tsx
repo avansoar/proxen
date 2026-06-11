@@ -9,14 +9,37 @@ import FooterThree from "../../../layouts/footers/FooterThree";
 // ── SEO ───────────────────────────────────────────────────────
 import PageSEO from "../../SEO/PageSEO";
 
-// ── Sections (exactly as per PDF design) ──────────────────────
+// ── Above-fold sections (eagerly loaded for FCP) ──────────────
 import HeroSection from "../home/HeroSection";
 import ServicesSection from "../home/ServicesSection";
-import OurClients from "../../single-service/OurClients";
-import PortfolioAreaHomeTwo from "./PortfolioAreaHomeTwo";
-import ProcessSection from "../home/ProcessSection";
-import TestimonialsSection from "../home/TestimonialsSection";
-import FAQSection from "../home/FAQSection";
+
+// ── Below-fold sections (dynamically loaded to reduce TBT/JS) ─
+import dynamic from "next/dynamic";
+
+const OurClients = dynamic(() => import("../../single-service/OurClients"), {
+  ssr: false,
+  loading: () => <div style={{ minHeight: 200 }} />,
+});
+
+const PortfolioAreaHomeTwo = dynamic(() => import("./PortfolioAreaHomeTwo"), {
+  ssr: false,
+  loading: () => <div style={{ minHeight: 200 }} />,
+});
+
+const ProcessSection = dynamic(() => import("../home/ProcessSection"), {
+  ssr: false,
+  loading: () => <div style={{ minHeight: 200 }} />,
+});
+
+const TestimonialsSection = dynamic(() => import("../home/TestimonialsSection"), {
+  ssr: false,
+  loading: () => <div style={{ minHeight: 200 }} />,
+});
+
+const FAQSection = dynamic(() => import("../home/FAQSection"), {
+  ssr: false,
+  loading: () => <div style={{ minHeight: 200 }} />,
+});
 
 
 export default function HomeTwo() {

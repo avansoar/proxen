@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useRef, ChangeEvent, FormEvent } from 'react';
+import Image from 'next/image';
 import emailjs from '@emailjs/browser';
 import ReCAPTCHA from 'react-google-recaptcha';
 import { siteConfig } from '../../siteConfig';
@@ -188,9 +189,13 @@ export default function ContactusArea() {
                 <p>Say something to start a live chat!</p>
               </div>
               <div className="info-illustration">
-                <img
+                <Image
                   src="https://images.prismic.io/proxen/ahAjZLK9tuLqEEcy_contactimage.png?auto=format,compress"
                   alt="Contact Envelope"
+                  width={320}
+                  height={280}
+                  style={{ objectFit: 'contain', maxWidth: '90%', filter: 'drop-shadow(0 10px 15px rgba(0,0,0,0.1))' }}
+                  loading="lazy"
                 />
               </div>
               <div className="info-bottom">

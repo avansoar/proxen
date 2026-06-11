@@ -1,5 +1,6 @@
 // components/startups-guide/CaseStudyForStartUps.tsx
 import Link from "next/link";
+import Image from "next/image";
 import case_data from "../../data/case-study-data";
 
 export default function CaseStudyForStartUps() {
@@ -21,8 +22,8 @@ export default function CaseStudyForStartUps() {
                   <Link className="proxendefault-btn" href="/case-studies">
                     View All Studies
                     <span className="proxenbutton-icon">
-                      <img className="arry1" src="/assets/images/svg/arrow-right.png" alt="" />
-                      <img className="arry2" src="/assets/images/svg/arrow-right.png" alt="" />
+                      <Image className="arry1" src="/assets/images/svg/arrow-right.png" alt="" aria-hidden="true" width={20} height={20} />
+                      <Image className="arry2" src="/assets/images/svg/arrow-right.png" alt="" aria-hidden="true" width={20} height={20} />
                     </span>
                   </Link>
                 </div>
@@ -33,8 +34,8 @@ export default function CaseStudyForStartUps() {
             {case_data.slice(0, 2).map((item) => (
               <div key={item.id} className="col-lg-6 col-md-6" data-aos={item.dataAos} data-aos-delay={item.dataAosDelay}>
                 <div className="proxenblog-wrap aos-init">
-                  <div className="proxenblog-thumb">
-                    <Link href={`/case-studies/${item.slug}`}><img src={item.img} alt={item.title} /></Link>
+                  <div className="proxenblog-thumb" style={{ position: 'relative' }}>
+                    <Link href={`/case-studies/${item.slug}`}><Image src={item.img} alt={item.title} fill style={{ objectFit: 'cover' }} sizes="(max-width: 768px) 100vw, 50vw" loading="lazy" /></Link>
                     <Link href={`/case-studies/${item.slug}`}><div className="proxenblog-btn">{item.category}</div></Link>
                   </div>
                   <div className="proxenblog-meta">

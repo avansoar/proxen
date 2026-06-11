@@ -1,5 +1,6 @@
 // src/components/services/WhyChooseProxen.tsx
 import React from "react";
+import Image from 'next/image';
 import {
   HiOutlineFunnel,
   HiOutlineBolt,
@@ -54,13 +55,15 @@ function renderIcon(iconId: WhyChooseIconId): React.ReactNode {
   // Strategy 1: full URL (http/https) or root-relative path → <img>
   if (iconId.startsWith("http://") || iconId.startsWith("https://") || iconId.startsWith("/")) {
     return (
-      <img
+      <Image
         src={iconId}
         alt=""
         className="spp-why-icon-img"
         aria-hidden="true"
         loading="lazy"
-        decoding="async"
+        width={40}
+        height={40}
+        style={{ objectFit: 'contain' }}
       />
     );
   }

@@ -19,8 +19,10 @@ export default function WorkPage() {
       />
 
       <HeaderOne />
-      <WorkListing />
-      <DividedArea />
+      <main id="main-content">
+        <WorkListing />
+        <DividedArea />
+      </main>
       <FooterThree />
     </Wrapper>
   )

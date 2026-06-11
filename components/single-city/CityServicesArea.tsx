@@ -5,6 +5,7 @@
 // ─────────────────────────────────────────────────────────────────────────────
 
 import Link from 'next/link';
+import Image from 'next/image';
 import type { CityData } from '../../data/cities-data';
 import { normalizeCityPlainText } from './cityUtils';
 
@@ -280,7 +281,7 @@ export default function CityServicesArea({ city }: Props) {
                   <Link className="csa-btn-primary" href={intro.primaryCta.href}>
                     {normalizeCityPlainText(intro.primaryCta.label, city)}
                     <span className="csa-btn-icon">
-                      <img src="/assets/images/svg/arrow-right.png" alt="" />
+                      <Image src="/assets/images/svg/arrow-right.png" alt="" aria-hidden="true" width={16} height={16} style={{ objectFit: 'contain' }} />
                     </span>
                   </Link>
 
@@ -288,7 +289,7 @@ export default function CityServicesArea({ city }: Props) {
                     <a className="csa-btn-secondary" href={intro.secondaryCta.href}>
                       {normalizeCityPlainText(intro.secondaryCta.label, city)}
                       <span className="csa-btn-icon">
-                        <img src="/assets/images/svg/arrow-right.png" alt="" />
+                        <Image src="/assets/images/svg/arrow-right.png" alt="" aria-hidden="true" width={16} height={16} style={{ objectFit: 'contain' }} />
                       </span>
                     </a>
                   )}

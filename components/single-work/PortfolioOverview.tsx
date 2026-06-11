@@ -1,6 +1,7 @@
 // src/pages/single-work/PortfolioOverview.tsx
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { type PortfolioProject } from '../../data/portfolio-data';
 
 interface PortfolioOverviewProps {
@@ -92,11 +93,14 @@ export default function PortfolioOverview({ project }: PortfolioOverviewProps) {
                 data-aos="fade-left"
                 data-aos-delay="400"
               >
-                <img
+                <Image
                   src={overview.image}
                   alt={`${project.hero.headline} overview`}
                   className="w-100"
+                  width={600}
+                  height={420}
                   style={{ borderRadius: '12px', objectFit: 'cover' }}
+                  loading="lazy"
                 />
               </div>
             </div>
@@ -166,8 +170,8 @@ export default function PortfolioOverview({ project }: PortfolioOverviewProps) {
                   >
                     {ctaText}
                     <span className="proxenbutton-icon">
-                      <img className="arry1" src="/assets/images/svg/arrow-white.svg" alt="arrow-right" />
-                      <img className="arry2" src="/assets/images/svg/arrow-white.svg" alt="arrow-right" />
+                      <Image className="arry1" src="/assets/images/svg/arrow-white.svg" alt="" aria-hidden="true" width={20} height={20} />
+                      <Image className="arry2" src="/assets/images/svg/arrow-white.svg" alt="" aria-hidden="true" width={20} height={20} />
                     </span>
                   </Link>
                 </div>

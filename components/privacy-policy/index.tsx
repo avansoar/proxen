@@ -20,8 +20,10 @@ export default function PrivacyPolicy() {
       />
 
       <HeaderOne />
-      <PrivacyPolicyArea />
-      <DividedArea />
+      <main id="main-content">
+        <PrivacyPolicyArea />
+        <DividedArea />
+      </main>
       <FooterThree />
     </Wrapper>
   );

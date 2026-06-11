@@ -1,6 +1,7 @@
 // src/pages/single-work/PortfolioHero.tsx
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { type PortfolioProject } from '../../data/portfolio-data';
 
 interface PortfolioHeroProps {
@@ -76,10 +77,14 @@ export default function PortfolioHero({ project }: PortfolioHeroProps) {
                 data-aos="fade-left"
                 data-aos-delay="400"
               >
-                <img
+                <Image
                   src={hero.mainImage}
                   alt={hero.headline}
                   className="portfolio-hero-main-image img-fluid"
+                  width={600}
+                  height={420}
+                  style={{ objectFit: 'cover' }}
+                  priority
                 />
               </div>
             </div>
@@ -91,10 +96,13 @@ export default function PortfolioHero({ project }: PortfolioHeroProps) {
                 {/* Logo */}
                 {hero.logo && (
                   <div className="mb-4" data-aos="fade-up" data-aos-delay="300">
-                    <img
+                    <Image
                       src={hero.logo}
                       alt={`${hero.headline} logo`}
                       className="portfolio-hero-logo img-fluid mx-auto d-block"
+                      width={210}
+                      height={80}
+                      style={{ objectFit: 'contain' }}
                     />
                   </div>
                 )}
@@ -143,8 +151,8 @@ export default function PortfolioHero({ project }: PortfolioHeroProps) {
                   >
                     {ctaText}
                     <span className="proxenbutton-icon">
-                      <img className="arry1" src="/assets/images/svg/arrow-white.svg" alt="arrow-right" />
-                      <img className="arry2" src="/assets/images/svg/arrow-white.svg" alt="arrow-right" />
+                      <Image className="arry1" src="/assets/images/svg/arrow-white.svg" alt="" aria-hidden="true" width={20} height={20} />
+                      <Image className="arry2" src="/assets/images/svg/arrow-white.svg" alt="" aria-hidden="true" width={20} height={20} />
                     </span>
                   </Link>
                 </div>

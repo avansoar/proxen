@@ -5,6 +5,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import menu_data from "../../data/menu-data";
 import OffCanvas from "../../common/OffCanvas";
 
@@ -25,9 +26,12 @@ const HeaderOne = () => {
             <div className="col-8 col-sm-auto">
               <div className="header-logo">
                 <Link href="/">
-                  <img
+                  <Image
                     src="/assets/images/logo/proxen-logo.svg"
                     alt="Proxen logo"
+                    width={140}
+                    height={40}
+                    priority
                   />
                 </Link>
               </div>
@@ -101,15 +105,21 @@ const HeaderOne = () => {
               >
                 Contact us
                 <span className="proxenbutton-icon">
-                  <img
+                  <Image
                     className="arry1"
                     src="/assets/images/svg/arrow-right.png"
-                    alt="Right Arrow"
+                    alt=""
+                    aria-hidden="true"
+                    width={20}
+                    height={20}
                   />
-                  <img
+                  <Image
                     className="arry2"
                     src="/assets/images/svg/arrow-right.png"
-                    alt="Right Arrow"
+                    alt=""
+                    aria-hidden="true"
+                    width={20}
+                    height={20}
                   />
                 </span>
               </Link>
@@ -119,6 +129,8 @@ const HeaderOne = () => {
                   <button
                     onClick={toggleMenu}
                     className="proxenmenu-toggle d-inline-block d-lg-none"
+                    aria-label={menuOpen ? "Close mobile menu" : "Open mobile menu"}
+                    aria-expanded={menuOpen}
                   >
                     <span></span>
                   </button>

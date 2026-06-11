@@ -14,8 +14,10 @@ export default function Blog() {
         canonical="https://proxen.ca/blog"
       />
       <HeaderOne />
-      <BlogArea />
-      <DividedArea />
+      <main id="main-content">
+        <BlogArea />
+        <DividedArea />
+      </main>
       <FooterThree />
     </Wrapper>
   );

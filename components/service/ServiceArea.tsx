@@ -2,6 +2,7 @@
 
 // src/components/service/ServiceArea.tsx
 import Link from "next/link";
+import Image from "next/image";
 import { getAllServices, toServiceListing } from "../../data/services-data";
 import HtmlRenderer from "../../common/HtmlRenderer";
 
@@ -54,14 +55,14 @@ const ServiceCard = ({ service, index }: ServiceCardProps) => {
         <div
           className={`col-lg-6 ${layoutSide === "right" ? "order-lg-2" : ""}`}
         >
-          <div className="proxenservice-d-thumb">
-            <img
+          <div className="proxenservice-d-thumb" style={{ position: 'relative', minHeight: '300px' }}>
+            <Image
               src={imageUrl}
               alt={service.title.rendered}
+              fill
+              style={{ objectFit: 'cover' }}
+              sizes="(max-width: 768px) 100vw, 50vw"
               loading="lazy"
-              onError={(e) => {
-                (e.target as HTMLImageElement).src = PLACEHOLDER_IMAGE;
-              }}
             />
           </div>
         </div>
@@ -109,16 +110,8 @@ const ServiceCard = ({ service, index }: ServiceCardProps) => {
               >
                 Explore more
                 <span className="proxenbutton-icon">
-                  <img
-                    className="arry1"
-                    src="/assets/images/svg/arrow-right.png"
-                    alt=""
-                  />
-                  <img
-                    className="arry2"
-                    src="/assets/images/svg/arrow-right.png"
-                    alt=""
-                  />
+                  <Image className="arry1" src="/assets/images/svg/arrow-right.png" alt="" aria-hidden="true" width={20} height={20} />
+                  <Image className="arry2" src="/assets/images/svg/arrow-right.png" alt="" aria-hidden="true" width={20} height={20} />
                 </span>
               </Link>
             </div>

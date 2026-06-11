@@ -73,11 +73,13 @@ export default function AboutThree() {
       />
 
       <HeaderOne />
-      <AboutHero />
-      <ServicesSection />
-      <TechStack />
-      <WhyChooseUs />
-      <OurClients />
+      <main id="main-content">
+        <AboutHero />
+        <ServicesSection />
+        <TechStack />
+        <WhyChooseUs />
+        <OurClients />
+      </main>
       {/* <HeroAboutThree />
       <DividedArea />
       <AboutHistory />

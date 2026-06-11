@@ -3,6 +3,7 @@
 // src/pages/single-work/PortfolioMoreProjects.tsx
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { useMemo } from 'react';
 import { portfolioProjects, type PortfolioProject } from '../../data/portfolio-data';
 import Slider from 'react-slick';
@@ -127,8 +128,8 @@ export default function PortfolioMoreProjects({ project }: PortfolioMoreProjects
           >
             {viewAllText}
             <span className="proxenbutton-icon">
-              <img className="arry1" src="/assets/images/svg/arrow-white.svg" alt="arrow-right" />
-              <img className="arry2" src="/assets/images/svg/arrow-white.svg" alt="arrow-right" />
+              <Image className="arry1" src="/assets/images/svg/arrow-white.svg" alt="" aria-hidden="true" width={20} height={20} />
+              <Image className="arry2" src="/assets/images/svg/arrow-white.svg" alt="" aria-hidden="true" width={20} height={20} />
             </span>
           </Link>
         </div>

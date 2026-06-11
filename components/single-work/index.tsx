@@ -34,21 +34,23 @@ const SingleWorkPage = ({ params }: { params?: { slug?: string } } = {}) => {
       />
 
       <HeaderOne />
-      <DividedArea />
+      <main id="main-content">
+        <DividedArea />
 
-      <PortfolioHero project={project} />
-      <DividedArea />
+        <PortfolioHero project={project} />
+        <DividedArea />
 
-      <PortfolioOverview project={project} />
-      <DividedArea />
+        <PortfolioOverview project={project} />
+        <DividedArea />
 
-      <PortfolioAssets project={project} />
-      <DividedArea />
+        <PortfolioAssets project={project} />
+        <DividedArea />
 
-      <PortfolioMoreProjects project={project} />
-      <DividedArea />
+        <PortfolioMoreProjects project={project} />
+        <DividedArea />
 
-      {/* <PortfolioBottomCTA project={project} /> */}
+        {/* <PortfolioBottomCTA project={project} /> */}
+      </main>
 
       <FooterThree />
     </Wrapper>

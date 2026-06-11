@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useEffect, useRef } from "react";
+import Image from 'next/image';
 import { heroSection, type HeroSectionData } from "../../data/services-data";
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -112,7 +113,7 @@ const ServicesHeroSection: React.FC<ServiceHeroProps> = ({
           <div className="spp-hero-trust" data-aos="fade-up" data-aos-delay="320">
             <div className="spp-avatar-stack" aria-label="Trusted by clients">
               {trustAvatars.map((av, i) => (
-                <img
+                <Image
                   key={i}
                   src={av.src}
                   alt={av.alt}
@@ -120,6 +121,7 @@ const ServicesHeroSection: React.FC<ServiceHeroProps> = ({
                   width={32}
                   height={32}
                   loading="lazy"
+                  style={{ objectFit: 'cover', borderRadius: '50%' }}
                 />
               ))}
             </div>
@@ -158,18 +160,15 @@ const ServicesHeroSection: React.FC<ServiceHeroProps> = ({
                   }
                   aria-hidden={i !== activeIndex}
                 >
-                  <img
+                  <Image
                     src={slide.src}
                     alt={slide.alt}
                     className="spp-hero-mockup"
-                    /*
-                      First slide loads eagerly (above the fold).
-                      Subsequent slides defer to avoid blocking initial render.
-                    */
                     loading={i === 0 ? "eager" : "lazy"}
                     width={640}
                     height={520}
                     draggable={false}
+                    style={{ width: '100%', height: 'auto' }}
                   />
                 </div>
               ))}

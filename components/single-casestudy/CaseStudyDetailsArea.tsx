@@ -1,5 +1,6 @@
 // components/single-casestudy/CaseStudyDetailsArea.tsx
 import Link from 'next/link';
+import Image from 'next/image';
 import {
   getCaseStudyBySlug,
   getCaseStudyCategories,
@@ -48,11 +49,14 @@ export default function CaseStudyDetailsArea({ caseStudy: initialCaseStudy }: { 
         <div className="row">
           <div className="col-lg-8">
             <div className="case-study-page-wrap">
-              <div className="proxenblog-single-thumb mb-40 rounded-3 overflow-hidden">
-                <img
+              <div className="proxenblog-single-thumb mb-40 rounded-3 overflow-hidden" style={{ position: 'relative', minHeight: '300px' }}>
+                <Image
                   src={caseStudy.img}
                   alt={caseStudy.title}
-                  loading="eager"
+                  fill
+                  style={{ objectFit: 'cover' }}
+                  sizes="(max-width: 768px) 100vw, 66vw"
+                  priority
                 />
               </div>
 
@@ -162,13 +166,17 @@ export default function CaseStudyDetailsArea({ caseStudy: initialCaseStudy }: { 
                     key={item.slug}
                     className="proxenrecent-post-item"
                   >
-                    <div className="proxenrecent-post-thumb">
+                    <div className="proxenrecent-post-thumb" style={{ position: 'relative' }}>
                       <Link
                         href={`/case-studies/${item.slug}`}
                       >
-                        <img
+                        <Image
                           src={item.img}
                           alt={item.title}
+                          fill
+                          style={{ objectFit: 'cover' }}
+                          sizes="150px"
+                          loading="lazy"
                         />
                       </Link>
                     </div>

@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { portfolioProjects } from '../../data/portfolio-data';
 import DividedArea from '../../common/DividedArea';
 
@@ -365,7 +366,7 @@ export default function WorkGrid() {
 
                   {/* Logo — standalone */}
                   <div className="wg-logo">
-                    <img src="https://images.prismic.io/proxen/ac9eW5GXnQHGZPch_nr-logo.png?auto=format,compress" alt="NR Roofing & Renos logo" />
+                    <Image src="https://images.prismic.io/proxen/ac9eW5GXnQHGZPch_nr-logo.png?auto=format,compress" alt="NR Roofing & Renos logo" width={180} height={44} style={{ objectFit: 'contain' }} loading="lazy" />
                   </div>
 
                   {/* Title + Button — together */}
@@ -376,7 +377,7 @@ export default function WorkGrid() {
 
                 </div>
                 <div className="wg-card-mockup">
-                  <img src="https://images.prismic.io/proxen/ac9fV5GXnQHGZPcs_nr-main-img.png?auto=format,compress" alt="NR Roofing mockup" />
+                  <Image src="https://images.prismic.io/proxen/ac9fV5GXnQHGZPcs_nr-main-img.png?auto=format,compress" alt="NR Roofing mockup" width={400} height={300} style={{ objectFit: 'contain', width: '100%', height: '100%' }} loading="lazy" />
                 </div>
               </div>
 
@@ -385,7 +386,7 @@ export default function WorkGrid() {
 
                 {/* Logo — standalone */}
                 <div className="wg-logo">
-                  <img src="https://images.prismic.io/proxen/ac9eXZGXnQHGZPcj_gardec-logo.png?auto=format,compress" alt="Gardec logo" />
+                  <Image src="https://images.prismic.io/proxen/ac9eXZGXnQHGZPcj_gardec-logo.png?auto=format,compress" alt="Gardec logo" width={180} height={44} style={{ objectFit: 'contain' }} loading="lazy" />
                 </div>
 
                 {/* Title + Button — together */}
@@ -395,7 +396,7 @@ export default function WorkGrid() {
                 </div>
 
                 <div className="wg-mock-bottom">
-                  <img src="https://images.prismic.io/proxen/ac9uopGXnQHGZPfs_gared-main.png?auto=format,compress" alt="Gardec mockup" />
+                  <Image src="https://images.prismic.io/proxen/ac9uopGXnQHGZPfs_gared-main.png?auto=format,compress" alt="Gardec mockup" width={400} height={200} style={{ objectFit: 'contain', width: '100%', height: '100%' }} loading="lazy" />
                 </div>
               </div>
 
@@ -404,7 +405,7 @@ export default function WorkGrid() {
 
                 {/* Logo — standalone */}
                 <div className="wg-logo">
-                  <img src="https://images.prismic.io/proxen/ac9eXJGXnQHGZPci_heatflow-logo.png?auto=format,compress" alt="Heatflow Experts logo" />
+                  <Image src="https://images.prismic.io/proxen/ac9eXJGXnQHGZPci_heatflow-logo.png?auto=format,compress" alt="Heatflow Experts logo" width={180} height={44} style={{ objectFit: 'contain' }} loading="lazy" />
                 </div>
 
                 {/* Title + Button — together */}
@@ -414,7 +415,7 @@ export default function WorkGrid() {
                 </div>
 
                 <div className="wg-mock-bottom">
-                  <img src="https://images.prismic.io/proxen/ac9uoJGXnQHGZPfr_Heaatflow-main.png?auto=format,compress" alt="Heatflow Experts mockup" />
+                  <Image src="https://images.prismic.io/proxen/ac9uoJGXnQHGZPfr_Heaatflow-main.png?auto=format,compress" alt="Heatflow Experts mockup" width={400} height={200} style={{ objectFit: 'contain', width: '100%', height: '100%' }} loading="lazy" />
                 </div>
               </div>
 
@@ -423,7 +424,7 @@ export default function WorkGrid() {
 
                 {/* Logo — standalone */}
                 <div className="wg-logo">
-                  <img src="https://images.prismic.io/proxen/ac9eWpGXnQHGZPcg_gcu-logo.png?auto=format,compress" alt="Game Changer Universe logo" />
+                  <Image src="https://images.prismic.io/proxen/ac9eWpGXnQHGZPcg_gcu-logo.png?auto=format,compress" alt="Game Changer Universe logo" width={180} height={44} style={{ objectFit: 'contain' }} loading="lazy" />
                 </div>
 
                 {/* Title + Button — together */}
@@ -433,7 +434,7 @@ export default function WorkGrid() {
                 </div>
 
                 <div className="wg-mock-bottom">
-                  <img src="https://images.prismic.io/proxen/ac9un5GXnQHGZPfq_gcu-main.png?auto=format,compress" alt="Game Changer Universe mockup" />
+                  <Image src="https://images.prismic.io/proxen/ac9un5GXnQHGZPfq_gcu-main.png?auto=format,compress" alt="Game Changer Universe mockup" width={400} height={200} style={{ objectFit: 'contain', width: '100%', height: '100%' }} loading="lazy" />
                 </div>
               </div>
 
@@ -442,7 +443,7 @@ export default function WorkGrid() {
 
                 {/* Logo — standalone */}
                 <div className="wg-logo">
-                  <img src="https://images.prismic.io/proxen/ac9eWZGXnQHGZPcf_dm-logo.png?auto=format,compress" alt="Desire Motors logo" />
+                  <Image src="https://images.prismic.io/proxen/ac9eWZGXnQHGZPcf_dm-logo.png?auto=format,compress" alt="Desire Motors logo" width={180} height={44} style={{ objectFit: 'contain' }} loading="lazy" />
                 </div>
 
                 {/* Title + Button — together */}
@@ -452,7 +453,7 @@ export default function WorkGrid() {
                 </div>
 
                 <div className="wg-mock-bottom">
-                  <img src="https://images.prismic.io/proxen/ac9uopGXnQHGZPft_dm-main.png?auto=format,compress" alt="Desire Motors mockup" />
+                  <Image src="https://images.prismic.io/proxen/ac9uopGXnQHGZPft_dm-main.png?auto=format,compress" alt="Desire Motors mockup" width={400} height={200} style={{ objectFit: 'contain', width: '100%', height: '100%' }} loading="lazy" />
                 </div>
               </div>
 
@@ -462,7 +463,7 @@ export default function WorkGrid() {
 
                   {/* Logo — standalone */}
                   <div className="wg-logo">
-                    <img src="https://images.prismic.io/proxen/ac9eXpGXnQHGZPck_mii-logo.png?auto=format,compress" alt="Made In India logo" />
+                    <Image src="https://images.prismic.io/proxen/ac9eXpGXnQHGZPck_mii-logo.png?auto=format,compress" alt="Made In India logo" width={180} height={44} style={{ objectFit: 'contain' }} loading="lazy" />
                   </div>
 
                   {/* Title + Button — together */}
@@ -473,7 +474,7 @@ export default function WorkGrid() {
 
                 </div>
                 <div className="wg-card-mockup">
-                  <img src="https://images.prismic.io/proxen/ac-Bq5GXnQHGZPlY_MadeinIndia1-1-.png?auto=format,compress" alt="Made In India mockup" />
+                  <Image src="https://images.prismic.io/proxen/ac-Bq5GXnQHGZPlY_MadeinIndia1-1-.png?auto=format,compress" alt="Made In India mockup" width={400} height={300} style={{ objectFit: 'contain', width: '100%', height: '100%' }} loading="lazy" />
                 </div>
               </div>
 
@@ -489,16 +490,8 @@ export default function WorkGrid() {
             <Link className="proxendefault-btn" href="/work">
               View All Work
               <span className="proxenbutton-icon">
-                <img
-                  className="arry1"
-                  src="/assets/images/svg/arrow-right.png"
-                  alt="arrow-right"
-                />
-                <img
-                  className="arry2"
-                  src="/assets/images/svg/arrow-right.png"
-                  alt="arrow-right"
-                />
+                <Image className="arry1" src="/assets/images/svg/arrow-right.png" alt="" aria-hidden="true" width={20} height={20} />
+                <Image className="arry2" src="/assets/images/svg/arrow-right.png" alt="" aria-hidden="true" width={20} height={20} />
               </span>
             </Link>
           </div>

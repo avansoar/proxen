@@ -9,6 +9,7 @@
 
 import { useMemo } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import {
   citiesData,
   getCitiesByServiceType,
@@ -204,8 +205,8 @@ export default function CitiesArea() {
           <Link className="proxendefault-btn" href="/services">
             View All Services
             <span className="proxenbutton-icon">
-              <img className="arry1" src="/assets/images/svg/arrow-right.png" alt="" />
-              <img className="arry2" src="/assets/images/svg/arrow-right.png" alt="" />
+              <Image className="arry1" src="/assets/images/svg/arrow-right.png" alt="" aria-hidden="true" width={20} height={20} />
+              <Image className="arry2" src="/assets/images/svg/arrow-right.png" alt="" aria-hidden="true" width={20} height={20} />
             </span>
           </Link>
         </div>

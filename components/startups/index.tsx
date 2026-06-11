@@ -28,7 +28,7 @@ const StartupPage: React.FC = () => {
       />
       <HeaderOne />
 
-      <div id="sp-startup-page" className="sp-page-wrapper">
+      <main id="sp-startup-page" className="sp-page-wrapper">
         <HeroSection />
 
         <WhoWeWorkWith />
@@ -48,7 +48,7 @@ const StartupPage: React.FC = () => {
         {/* <CTASection /> */}
 
         {/* <DividedArea /> */}
-      </div>
+      </main>
 
       <FooterThree />
     </Wrapper>

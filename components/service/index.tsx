@@ -20,8 +20,10 @@ export default function Service() {
       />
 
       <HeaderOne />
-      <ServiceArea />
-      <DividedArea />
+      <main id="main-content">
+        <ServiceArea />
+        <DividedArea />
+      </main>
       <FooterThree />
     </Wrapper>
   );

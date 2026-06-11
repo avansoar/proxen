@@ -25,9 +25,11 @@ export default function CaseStudyDetails({ params }: { params?: { slug?: string 
         canonical={`https://proxen.ca/case-studies/${caseStudy.slug}`}
       />
       <HeaderOne />
-      <CaseStudyDetailsArea caseStudy={caseStudy} />
-      <DividedArea />
-      <CaseStudyForStartUps />
+      <main id="main-content">
+        <CaseStudyDetailsArea caseStudy={caseStudy} />
+        <DividedArea />
+        <CaseStudyForStartUps />
+      </main>
       <FooterThree />
     </Wrapper>
   );

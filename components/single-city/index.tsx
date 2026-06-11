@@ -5,6 +5,7 @@
 // ─────────────────────────────────────────────────────────────────────────────
 
 import Link from 'next/link';
+import Image from 'next/image';
 
 import Wrapper from '../../layouts/Wrapper';
 import HeaderOne from '../../layouts/headers/HeaderOne';
@@ -400,6 +401,7 @@ export default function SingleCity({ params }: { params?: { slug?: string } } = 
       />
 
       <HeaderOne />
+      <main id="main-content" className="single-city-wrapper">
 
       {/* ════════════════════════
           HERO
@@ -436,7 +438,7 @@ export default function SingleCity({ params }: { params?: { slug?: string } } = 
                   <a className="sc-btn-primary" href={hero.primaryCta.href}>
                     {hero.primaryCta.label}
                     <span className="sc-btn-icon">
-                      <img src="/assets/images/svg/arrow-right.png" alt="" />
+                      <Image src="/assets/images/svg/arrow-right.png" alt="" aria-hidden="true" width={14} height={14} style={{ objectFit: 'contain', filter: 'brightness(0) invert(1)' }} />
                     </span>
                   </a>
 
@@ -444,7 +446,7 @@ export default function SingleCity({ params }: { params?: { slug?: string } } = 
                     <a className="sc-btn-secondary" href={hero.secondaryCta.href}>
                       {hero.secondaryCta.label}
                       <span className="sc-btn-icon">
-                        <img src="/assets/images/svg/arrow-right.png" alt="" />
+                        <Image src="/assets/images/svg/arrow-right.png" alt="" aria-hidden="true" width={14} height={14} style={{ objectFit: 'contain', filter: 'brightness(0) invert(1)' }} />
                       </span>
                     </a>
                   )}
@@ -456,12 +458,14 @@ export default function SingleCity({ params }: { params?: { slug?: string } } = 
             <div className="col-lg-6">
               <div className="sc-hero-image-wrap" data-aos="fade-left" data-aos-delay="200">
                 <div className="sc-hero-image-frame">
-                  <img
+                  <Image
                     src={hero.image.src}
                     alt={heroImageAlt}
                     className="sc-hero-img"
-                    loading="eager"
-                    decoding="async"
+                    width={640}
+                    height={420}
+                    style={{ objectFit: 'cover', objectPosition: 'center 35%' }}
+                    priority
                   />
                 </div>
 
@@ -531,7 +535,7 @@ export default function SingleCity({ params }: { params?: { slug?: string } } = 
                 <Link className="sc-about-link" href={about.cta.href}>
                   {about.cta.label}
                   <span className="sc-btn-icon">
-                    <img src="/assets/images/svg/arrow-right.png" alt="" />
+                    <Image src="/assets/images/svg/arrow-right.png" alt="" aria-hidden="true" width={14} height={14} style={{ objectFit: 'contain' }} />
                   </span>
                 </Link>
               </div>
@@ -541,12 +545,14 @@ export default function SingleCity({ params }: { params?: { slug?: string } } = 
             <div className="col-lg-6">
               <div className="sc-about-image-wrap" data-aos="fade-right" data-aos-delay="200">
                 <div className="sc-about-image-frame">
-                  <img
+                  <Image
                     src={about.image.src}
                     alt={aboutImageAlt}
                     className="sc-about-img"
+                    width={640}
+                    height={380}
+                    style={{ objectFit: 'cover', objectPosition: 'center 40%' }}
                     loading="lazy"
-                    decoding="async"
                   />
                 </div>
                 <div className="sc-about-accent" aria-hidden="true" />
@@ -556,6 +562,7 @@ export default function SingleCity({ params }: { params?: { slug?: string } } = 
           </div>
         </div>
       </section>
+      </main>
 
       {/* <DividedArea /> */}
       <FooterThree />

@@ -72,7 +72,7 @@ const AboutUsHero: React.FC = () => {
         .sp-about-desc {
           font-size: clamp(1.0625rem, 1.5vw, 1.25rem);
           line-height: 1.65;
-          color: #6b7280; /* Gray text matching the design */
+          color: #596170; /* Gray text matching the design */
           font-weight: 500;
           margin-bottom: 48px;
           margin-top: 0;

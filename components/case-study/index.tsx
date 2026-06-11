@@ -19,8 +19,10 @@ export default function CaseStudiesPage() {
       />
 
       <HeaderOne />
-      <CaseStudyListing />
-      <DividedArea />
+      <main id="main-content">
+        <CaseStudyListing />
+        <DividedArea />
+      </main>
       <FooterThree />
     </Wrapper>
   );

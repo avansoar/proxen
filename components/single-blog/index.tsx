@@ -23,8 +23,10 @@ export default function BlogDetails({ params }: { params?: { slug?: string } } =
         canonical={`https://proxen.ca/blog/${post.slug}`}
       />
       <HeaderOne />
-      <BlogDetailsArea post={post} />
-      <DividedArea />
+      <main id="main-content">
+        <BlogDetailsArea post={post} />
+        <DividedArea />
+      </main>
       <FooterThree />
     </Wrapper>
   );

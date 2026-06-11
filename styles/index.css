@@ -27,7 +27,7 @@
   --hp-blue-pale:      #eef1fd;
   --hp-dark:           #0d1829;
   --hp-text:           #111827;
-  --hp-text-muted:     #6b7280;
+  --hp-text-muted:     #596170;
   --hp-border:         #e5e7eb;
   --hp-bg-soft:        #f4f6fb;
   --hp-radius-card:    20px;
@@ -2946,7 +2946,7 @@
   --sp-blue-glow: rgba(26, 86, 219, 0.1);
   --sp-dark: #0d1829;
   --sp-text: #111827;
-  --sp-text-secondary: #6b7280;
+  --sp-text-secondary: #596170;
   --sp-text-muted: #9ca3af;
   --sp-border: #e5e7eb;
   --sp-bg: #ffffff;

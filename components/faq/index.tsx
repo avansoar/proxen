@@ -20,8 +20,10 @@ export default function Faq() {
       />
 
       <HeaderOne />
-      <FaqArea />
-      <DividedArea />
+      <main id="main-content">
+        <FaqArea />
+        <DividedArea />
+      </main>
       <FooterThree />
     </Wrapper>
   )

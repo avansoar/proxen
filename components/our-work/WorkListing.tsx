@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 type PortfolioCard = {
   src: string;
@@ -131,9 +132,18 @@ export default function WorkListing() {
               style={{
                 gridColumn: `span ${item.colSpan}`,
                 gridRow: `span ${item.rowSpan}`,
+                position: 'relative',
+                display: 'block',
               }}
             >
-              <img src={item.src} alt={item.alt} loading={item.rowSpan === 1 ? 'lazy' : 'eager'} />
+              <Image
+                src={item.src}
+                alt={item.alt}
+                fill
+                style={{ objectFit: 'cover' }}
+                sizes={item.colSpan === 2 ? '(max-width: 768px) 100vw, 66vw' : '(max-width: 768px) 100vw, 33vw'}
+                loading="lazy"
+              />
             </Link>
           ))}
         </div>

@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { getBlogCategories, getFeaturedBlogPosts, getRecentBlogPosts } from '../../data/blogs-data';
 
 export default function BlogArea() {
@@ -28,9 +29,9 @@ export default function BlogArea() {
                   data-aos-delay={400 + index * 100}
                   data-aos="fade-up"
                 >
-                  <div className="proxenblog-thumb">
+                  <div className="proxenblog-thumb" style={{ position: 'relative' }}>
                     <Link href={`/blog/${post.slug}`}>
-                      <img src={post.image} alt={post.title} />
+                      <Image src={post.image} alt={post.title} fill style={{ objectFit: 'cover' }} sizes="(max-width: 768px) 100vw, 66vw" />
                     </Link>
                     <Link href={`/blog/${post.slug}`}>
                       <div className="proxenblog-btn">{post.category}</div>
@@ -61,10 +62,10 @@ export default function BlogArea() {
                 <form action="#">
                   <div className="proxensearch-box">
                     <input type="search" placeholder="Type keyword here..." />
-                    <button id="proxensearch-btn" className="proxendefault-btn" type="button">
+                    <button id="proxensearch-btn" className="proxendefault-btn" type="button" aria-label="Search">
                       <span className="proxenbutton-icon">
-                        <img className="arry1" src="/assets/images/svg/arrow-right.png" alt="" />
-                        <img className="arry2" src="/assets/images/svg/arrow-right.png" alt="" />
+                        <Image className="arry1" src="/assets/images/svg/arrow-right.png" alt="" aria-hidden="true" width={20} height={20} />
+                        <Image className="arry2" src="/assets/images/svg/arrow-right.png" alt="" aria-hidden="true" width={20} height={20} />
                       </span>
                     </button>
                   </div>
@@ -90,9 +91,9 @@ export default function BlogArea() {
                 <h4>Recent Posts</h4>
                 {recentPosts.map((post) => (
                   <div key={post.slug} className="proxenrecent-post-item">
-                    <div className="proxenrecent-post-thumb">
+                    <div className="proxenrecent-post-thumb" style={{ position: 'relative' }}>
                       <Link href={`/blog/${post.slug}`}>
-                        <img src={post.image} alt={post.title} />
+                        <Image src={post.image} alt={post.title} fill style={{ objectFit: 'cover' }} sizes="150px" />
                       </Link>
                     </div>
                     <div className="proxenrecent-post-content">

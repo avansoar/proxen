@@ -1,10 +1,11 @@
 // OurClients.tsx
-
+import Image from 'next/image';
 
 export interface Client {
   src: string;
   alt: string;
 }
+
 
 interface OurClientsProps {
   title?: string;
@@ -75,7 +76,7 @@ export default function OurClients({
           <div className="spp-ourclients-track track-left">
             {[...row1Clients, ...row1Clients].map((client, index) => (
               <div key={`row1-${index}`} className="spp-ourclients-card">
-                <img src={client.src} alt={client.alt} className="spp-ourclients-logo" />
+                <Image src={client.src} alt={client.alt} className="spp-ourclients-logo" width={120} height={48} style={{ objectFit: 'contain' }} />
               </div>
             ))}
           </div>
@@ -86,7 +87,7 @@ export default function OurClients({
           <div className="spp-ourclients-track track-right">
             {[...row2Clients, ...row2Clients].map((client, index) => (
               <div key={`row2-${index}`} className="spp-ourclients-card">
-                <img src={client.src} alt={client.alt} className="spp-ourclients-logo" />
+                <Image src={client.src} alt={client.alt} className="spp-ourclients-logo" width={120} height={48} style={{ objectFit: 'contain' }} />
               </div>
             ))}
           </div>

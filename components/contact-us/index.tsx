@@ -23,13 +23,15 @@ export default function Contactus3() {
       />
 
       <HeaderOne />
-      <Contactus3Area />
-      <DividedArea />
-      {/* <GoogleMap /> */}
-      <OurClients />
-      <DividedArea />
-      <ServiceTestimonials />
-      <DividedArea />
+      <main id="main-content">
+        <Contactus3Area />
+        <DividedArea />
+        {/* <GoogleMap /> */}
+        <OurClients />
+        <DividedArea />
+        <ServiceTestimonials />
+        <DividedArea />
+      </main>
 
       <FooterThree />
     </Wrapper>

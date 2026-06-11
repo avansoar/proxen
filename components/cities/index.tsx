@@ -18,10 +18,12 @@ export default function CitiesPage() {
         canonical="https://proxen.ca/cities-we-serve"
       />
       <HeaderOne />
-      <HeroCities />
-      <DividedArea />
-      <CitiesArea />
-      <DividedArea />
+      <main id="main-content">
+        <HeroCities />
+        <DividedArea />
+        <CitiesArea />
+        <DividedArea />
+      </main>
       <FooterThree />
     </Wrapper>
   );

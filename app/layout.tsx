@@ -27,6 +27,17 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
+      <head>
+        {/* Google Fonts preconnect — reduces DNS/handshake latency */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        {/* Hero background image preload — tells browser to fetch LCP resource early */}
+        <link
+          rel="preload"
+          as="image"
+          href="https://images.prismic.io/proxen/agwq96YofJOwHW1I_Hero-Bg.png?auto=format,compress"
+        />
+      </head>
       <body>
         {children}
         <Script

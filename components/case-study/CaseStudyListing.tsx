@@ -1,5 +1,6 @@
 // components/case-study/CaseStudyListing.tsx
 import Link from "next/link";
+import Image from "next/image";
 import { getAllCaseStudies } from "../../data/case-study-data";
 
 export default function CaseStudyListing() {
@@ -39,9 +40,9 @@ export default function CaseStudyListing() {
                 data-aos-delay={item.dataAosDelay}
               >
                 <div className="proxenblog-wrap aos-init">
-                  <div className="proxenblog-thumb">
+                  <div className="proxenblog-thumb" style={{ position: 'relative' }}>
                     <Link href={`/case-studies/${item.slug}`}>
-                      <img src={item.img} alt={item.title} />
+                      <Image src={item.img} alt={item.title} fill style={{ objectFit: 'cover' }} sizes="(max-width: 768px) 100vw, 50vw" loading="lazy" />
                     </Link>
                     <Link href={`/case-studies/${item.slug}`}>
                       <div className="proxenblog-btn">{item.category}</div>

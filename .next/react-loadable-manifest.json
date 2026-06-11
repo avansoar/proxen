@@ -1,8 +1,38 @@
 {
-  "layouts\\Wrapper.tsx -> aos": {
-    "id": 908,
+  "components\\homes\\home\\index.tsx -> ../../single-service/OurClients": {
+    "id": "components\\homes\\home\\index.tsx -> ../../single-service/OurClients",
     "files": [
-      "static/chunks/908.953cb6129add5ffc.js"
+      "static/chunks/_app-pages-browser_components_single-service_OurClients_tsx.js"
+    ]
+  },
+  "components\\homes\\home\\index.tsx -> ../home/FAQSection": {
+    "id": "components\\homes\\home\\index.tsx -> ../home/FAQSection",
+    "files": [
+      "static/chunks/_app-pages-browser_components_homes_home_FAQSection_tsx.js"
+    ]
+  },
+  "components\\homes\\home\\index.tsx -> ../home/ProcessSection": {
+    "id": "components\\homes\\home\\index.tsx -> ../home/ProcessSection",
+    "files": [
+      "static/chunks/_app-pages-browser_components_homes_home_ProcessSection_tsx.js"
+    ]
+  },
+  "components\\homes\\home\\index.tsx -> ../home/TestimonialsSection": {
+    "id": "components\\homes\\home\\index.tsx -> ../home/TestimonialsSection",
+    "files": [
+      "static/chunks/_app-pages-browser_components_homes_home_TestimonialsSection_tsx.js"
+    ]
+  },
+  "components\\homes\\home\\index.tsx -> ./PortfolioAreaHomeTwo": {
+    "id": "components\\homes\\home\\index.tsx -> ./PortfolioAreaHomeTwo",
+    "files": [
+      "static/chunks/_app-pages-browser_components_homes_home_PortfolioAreaHomeTwo_tsx.js"
+    ]
+  },
+  "layouts\\Wrapper.tsx -> aos": {
+    "id": "layouts\\Wrapper.tsx -> aos",
+    "files": [
+      "static/chunks/_app-pages-browser_node_modules_aos_dist_aos_js.js"
     ]
   }
 }

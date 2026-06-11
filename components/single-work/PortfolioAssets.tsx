@@ -2,6 +2,7 @@
 
 // src/pages/single-work/PortfolioAssets.tsx
 
+import Image from 'next/image';
 import { type PortfolioProject } from '../../data/portfolio-data';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { EffectCoverflow, Autoplay, Pagination } from 'swiper/modules';
@@ -106,8 +107,8 @@ export default function PortfolioAssets({ project }: PortfolioAssetsProps) {
               >
                 {buttonText}
                 <span className="proxenbutton-icon">
-                  <img className="arry1" src="/assets/images/svg/arrow-white.svg" alt="arrow-right" />
-                  <img className="arry2" src="/assets/images/svg/arrow-white.svg" alt="arrow-right" />
+                  <Image className="arry1" src="/assets/images/svg/arrow-white.svg" alt="" aria-hidden="true" width={20} height={20} />
+                  <Image className="arry2" src="/assets/images/svg/arrow-white.svg" alt="" aria-hidden="true" width={20} height={20} />
                 </span>
               </a>
             </div>

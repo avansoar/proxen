@@ -1,5 +1,6 @@
 // FooterThree.tsx
 import Link from 'next/link';
+import Image from 'next/image';
 import { siteConfig } from '../../siteConfig';
 
 // ─── Inline Social Icons (no extra dependency) ────────────────────────────────
@@ -156,7 +157,7 @@ export default function FooterThree() {
         .pf3-nav-list li a {
           font-size: 1.0375rem;
           font-weight: 400;
-          color: #6b7280;
+          color: #596170;
           text-decoration: none;
           transition: color 0.2s ease;
           line-height: 1.4;
@@ -183,14 +184,14 @@ export default function FooterThree() {
           margin: 0;
           font-size: 0.875rem;
           font-weight: 400;
-          color: #6b7280;
+          color: #596170;
           letter-spacing: 0.01em;
         }
 
         .pf3-bottom-policy {
           font-size: 0.875rem;
           font-weight: 400;
-          color: #6b7280;
+          color: #596170;
           text-decoration: none;
           white-space: nowrap;
           flex-shrink: 0;
@@ -247,9 +248,12 @@ export default function FooterThree() {
             {/* ── Column 1: Brand ── */}
             <div className="pf3-col-brand">
               <Link href="/" className="pf3-brand-logo" aria-label="Proxen — go to homepage">
-                <img
+                <Image
                   src="/assets/images/logo/proxen-logo.svg"
                   alt="Proxen Logo"
+                  width={150}
+                  height={46}
+                  style={{ height: 'auto' }}
                 />
               </Link>
 

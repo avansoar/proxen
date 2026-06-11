@@ -1,20 +1,18 @@
 'use client';
 
-  
-import  { useState } from 'react'
+import { useState } from 'react';
 import menu_data from '../data/menu-data';
 import Link from 'next/link';
+import Image from 'next/image';
 
 interface OffCanvasProps {
-  menuOpen: boolean; 
+  menuOpen: boolean;
   setMenuOpen: (value: boolean) => void;
 }
-
 
 export default function OffCanvas({ menuOpen, setMenuOpen }: OffCanvasProps) {
 
   const [navTitle, setNavTitle] = useState("");
-  //openMobileMenu
   const openMobileMenu = (menu: string) => {
     if (navTitle === menu) {
       setNavTitle("");
@@ -24,7 +22,6 @@ export default function OffCanvas({ menuOpen, setMenuOpen }: OffCanvasProps) {
   };
 
   const [navTitle2, setNavTitle2] = useState("");
-  //openMobileMenu
   const openMobileMenu2 = (menu: string) => {
     if (navTitle2 === menu) {
       setNavTitle2("");
@@ -34,23 +31,25 @@ export default function OffCanvas({ menuOpen, setMenuOpen }: OffCanvasProps) {
   };
 
   const handleWrapperClick = (e: React.MouseEvent<HTMLDivElement>) => {
-    // Close only if clicked directly on wrapper (not inside content)
     if (e.target === e.currentTarget) {
       setMenuOpen(false);
     }
   };
 
   return (
-
     <div className={`proxenmenu-wrapper ${menuOpen ? 'proxenbody-visible' : ''}`} onClick={handleWrapperClick}>
       <div className="proxenmenu-area text-center">
         <div className="proxenmenu-mobile-top">
           <div className="mobile-logo">
             <Link href="/">
-              <img src="/assets/images/logo/proxen-logo.svg" alt="logo" />
+              <Image src="/assets/images/logo/proxen-logo.svg" alt="Proxen logo" width={140} height={40} />
             </Link>
           </div>
-          <button className="proxenmenu-toggle mobile" onClick={() => setMenuOpen(false)}>
+          <button
+            className="proxenmenu-toggle mobile"
+            onClick={() => setMenuOpen(false)}
+            aria-label="Close mobile menu"
+          >
             <i className="ri-close-line"></i>
           </button>
         </div>
@@ -63,7 +62,7 @@ export default function OffCanvas({ menuOpen, setMenuOpen }: OffCanvasProps) {
                   {item.has_dropdown && <span onClick={() => openMobileMenu(item.title)} className="proxenmean-expand"></span>}
                 </Link>
                 {item?.has_dropdown &&
-                  <ul className={`sub-menu proxensubmenu ${navTitle === item?.title ? "proxenopen" : ""}`} style={{ display: navTitle === item.title ? "block" : "none", }}>
+                  <ul className={`sub-menu proxensubmenu ${navTitle === item?.title ? "proxenopen" : ""}`} style={{ display: navTitle === item.title ? "block" : "none" }}>
                     {item.has_dropdown && item.sub_menus && item.sub_menus.map((sub_item, index) => (
                       <li className={`${sub_item?.has_sub_dropdown ? 'menu-item-has-children proxenitem-has-children' : ''} ${navTitle2 === sub_item.title ? "proxenactive" : ""}`} key={index}>
                         <Link href={sub_item.link}>
@@ -71,7 +70,7 @@ export default function OffCanvas({ menuOpen, setMenuOpen }: OffCanvasProps) {
                           {sub_item.has_sub_dropdown && <><span className="proxenmean-expand" onClick={() => openMobileMenu2(sub_item.title)}></span><span onClick={() => openMobileMenu2(sub_item.title)} className="proxenmean-expand"></span></>}
                         </Link>
                         {sub_item?.has_sub_dropdown &&
-                          <ul className={`sub-menu proxensubmenu ${navTitle2 === sub_item?.title ? "proxenopen" : ""}`} style={{ display: navTitle2 === sub_item?.title ? "block" : "none", }}>
+                          <ul className={`sub-menu proxensubmenu ${navTitle2 === sub_item?.title ? "proxenopen" : ""}`} style={{ display: navTitle2 === sub_item?.title ? "block" : "none" }}>
                             {sub_item.has_sub_dropdown && sub_item.sub_menus && sub_item.sub_menus.map((sub_inner_item, sub_index) => (
                               <li key={sub_index}><Link href={sub_inner_item.link}>{sub_inner_item.title}</Link></li>
                             ))}
@@ -86,15 +85,15 @@ export default function OffCanvas({ menuOpen, setMenuOpen }: OffCanvasProps) {
           </ul>
         </div>
         <div className="proxenmobile-menu-btn">
-          <Link className="proxendefault-btn proxenheader-btn btn2" href="/contact-us">Contact us
+          <Link className="proxendefault-btn proxenheader-btn btn2" href="/contact-us">
+            Contact us
             <span className="proxenbutton-icon">
-              <img className="arry1" src="/assets/images/svg/arrow-right.png" alt="" />
-              <img className="arry2" src="/assets/images/svg/arrow-right.png" alt="" />
+              <Image className="arry1" src="/assets/images/svg/arrow-right.png" alt="" aria-hidden="true" width={20} height={20} />
+              <Image className="arry2" src="/assets/images/svg/arrow-right.png" alt="" aria-hidden="true" width={20} height={20} />
             </span>
           </Link>
         </div>
       </div>
     </div>
-
-  )
+  );
 }

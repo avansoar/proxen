@@ -9,7 +9,9 @@ export default function NotFound() {
   return (
     <Wrapper>
       <HeaderOne />
-      <ErrorArea />
+      <main id="main-content">
+        <ErrorArea />
+      </main>
       <FooterThree />
     </Wrapper>
   );

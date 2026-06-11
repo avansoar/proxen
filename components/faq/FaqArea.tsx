@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 interface FaqItem {
   id: number;
@@ -95,7 +96,7 @@ export default function FaqArea() {
               >
                 <h3>{formatQuestionWithNumber(faq.question, index)}</h3>
                 <div className="proxenactive-icon" aria-hidden="true">
-                  <img className="mynusicon" src="/assets/images/svg/plas.svg" alt="" />
+                  <Image className="mynusicon" src="/assets/images/svg/plas.svg" alt="" width={20} height={20} />
                 </div>
               </button>
 
@@ -118,8 +119,8 @@ export default function FaqArea() {
             <Link className="proxendefault-btn aos-init" data-aos-delay="1000" data-aos="fade-up" href="/contact-us">
               Ready to Grow?
               <span className="proxenbutton-icon">
-                <img className="arry1" src="/assets/images/svg/arrow-right.png" alt="arrow" width={20} height={20} />
-                <img className="arry2" src="/assets/images/svg/arrow-right.png" alt="arrow" width={20} height={20} />
+                <Image className="arry1" src="/assets/images/svg/arrow-right.png" alt="" aria-hidden="true" width={20} height={20} />
+                <Image className="arry2" src="/assets/images/svg/arrow-right.png" alt="" aria-hidden="true" width={20} height={20} />
               </span>
             </Link>
           </div>
